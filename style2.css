@@ -1,0 +1,141 @@
+* {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    background: black; /* Set a dark background for better visibility */
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Tangerine');
+  
+  canvas {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+  }
+  
+  /* Smoke effect for the main page */
+  .smoke {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fade 13s;
+  }
+  
+  /* Smoke effect for the welcome page */
+  .welcome .smoke {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fade 13s;
+  }
+  
+  /* Make "Welcome to My World" white */
+  .welcome .smoke span {
+    color: #fff; /* White color */
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+    letter-spacing: 10px;
+    font-size: 2.5em;
+    animation: animate 6s cubic-bezier(0, 0.98, 0.58, 1) infinite;
+  }
+  
+  @keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  .smoke span {
+    position: relative;
+    color: #fff; /* Default color is white */
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+    letter-spacing: 10px;
+    font-size: 2.5em;
+    animation: animate 6s cubic-bezier(0, 0.98, 0.58, 1) infinite;
+  }
+  
+  /* Make "Shristi Nanda" red */
+  .smoke span:nth-child(1) {
+    color: #b61b1b;
+  }
+  
+  /* Keep the rest of the text white */
+  .smoke span:not(:nth-child(1)) {
+    color: #fff;
+  }
+  
+  @keyframes animate {
+    0% {
+        filter: blur(0);
+    }
+    40% {
+        filter: blur(20px);
+    }
+    80% {
+        filter: blur(0);
+    }
+    100% {
+        filter: blur(0);
+    }
+  }
+  
+  /* Button Styles */
+  .button-container {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  /* Yes Button */
+  .yes-btn {
+    background-color: darkred;
+    color: white;
+  }
+  
+  .yes-btn:hover {
+    background-color: crimson;
+  }
+  
+  /* No Button */
+  .no-btn {
+    background-color: darkred;
+    color: white;
+  }
+  
+  .no-btn:hover {
+    background-color: crimson;
+  }
